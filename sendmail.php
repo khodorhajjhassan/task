@@ -23,7 +23,7 @@ function sendEmailWithCC($to, $cc, $subject, $message) {
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 
-        $mail->setFrom('your_email@example.com', 'SkyLine');
+        $mail->setFrom('your_email@example.com', 'Task');
         $mail->addAddress($to);
         $mail->addCC($cc);
         $mail->isHTML(true);

@@ -5,7 +5,7 @@ function sendVerificationEmail($email) {
     require('../sendmail.php');
 
     $to = $email;
-    $cc = "example@example.com";
+    $cc = "test@gmail.com";
     $subject = "Accept to join Our Team";
     $message = "
     <div style='width: 100%; background-color:#E5F6FF;padding:10px;border-radius:5px;'>

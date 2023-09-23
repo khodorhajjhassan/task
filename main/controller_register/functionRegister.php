@@ -4,7 +4,7 @@ function sendVerificationEmail($email, $name) {
     require('../sendmail.php');
 
     $to = $email;
-    $cc = "";
+    $cc = "test@gmail.com";
     $subject = "Welcome to join Our Team";
     $message = "
     <div style='width: 100%; background-color:#E5F6FF;padding:10px;border-radius:5px;'>
@@ -50,7 +50,6 @@ $stmt = mysqli_prepare($conn, $sql);
 mysqli_stmt_bind_param($stmt, "sssssss", $name, $email, $hashedPassword, $blood_type, $gender,$isApproved,$isAdmin);
 
 if (mysqli_stmt_execute($stmt)) {
-echo "<script>alert('User added successfully.');</script>";
 sendVerificationEmail($email,$name);
 header('Location: ../../index.php');
 } else {
